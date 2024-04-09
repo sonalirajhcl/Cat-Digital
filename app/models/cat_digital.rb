@@ -8,10 +8,8 @@ class CatDigital < ApplicationRecord
   after_update :notify_endpoints
 
   def notify_endpoints
-  	# byebug
     endpoints = Rails.application.config.webhook_endpoints
     endpoints.each do |endpoint|
-    	# byebug
       uri = URI.parse(endpoint)
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = uri.scheme == 'https'
