@@ -1,0 +1,9 @@
+development:
+  endpoints:
+    - http://example.com/webhook
+    - http://test.com/webhook
+
+production:
+  endpoints:
+    - http://example.com/webhook
+    - http://prod.com/webhook

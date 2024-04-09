@@ -1,0 +1,2 @@
+module CatDigitalHelper
+end
